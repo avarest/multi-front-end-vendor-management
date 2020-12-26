@@ -50,7 +50,6 @@ function activateEditor($editor, attrs = {}) {
     ];
 
     const $summernote = $editor.summernote($.extend(true, {
-        fontSizes: ["8", "9", "10", "11", "12", "14", "16", "18", "24", "36"],
         height: 200,
         popatmouse: false,
         disableDragAndDrop: true,

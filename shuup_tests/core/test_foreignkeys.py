@@ -30,9 +30,8 @@ def test_manufacturer_removal():
     manufacturer = Manufacturer.objects.create(name=DEFAULT_NAME)
     product.manufacturer = manufacturer
     product.save()
-    manufacturer.delete()
-    product.refresh_from_db()
-    assert not product.manufacturer
+    with pytest.raises(ProtectedError):
+        manufacturer.delete()
     assert Product.objects.filter(pk=product.pk).exists()
 
 

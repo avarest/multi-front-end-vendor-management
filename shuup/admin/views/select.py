@@ -131,9 +131,7 @@ class MultiselectAjaxView(TemplateView):
             qs = qs.filter(sales_unit__translations__symbol__in=sales_units.strip().split(","))
 
         qs = qs.distinct()
-        return sorted(
-            [{"id": obj.id, "name": force_text(obj)} for obj in qs[: self.result_limit]], key=lambda x: x["name"]
-        )
+        return [{"id": obj.id, "name": force_text(obj)} for obj in qs[:self.result_limit]]
 
     def _filter_query(self, request, cls, qs, shop, search_mode=None):
         # the supplier provider returned a valid supplier

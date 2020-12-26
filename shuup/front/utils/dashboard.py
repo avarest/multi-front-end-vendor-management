@@ -29,11 +29,6 @@ class DashboardItem(object):
     title = _("Dashboard")
 
     """
-    Sequence number of dashboard item
-    """
-    ordering = 0
-
-    """
     The size of dashboard item block
     """
     size = DashboardItemSize.LARGE

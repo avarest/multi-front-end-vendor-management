@@ -5,82 +5,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## Unreleased
+
 List all changes after the last release here (newer on top). Each change on a separate bullet point line
-
-
-### Changed
-
-- Admin: MultiselectAjaxView returns ordered by name choices
-
-### Fixed
--  Fix _vertical_phases.jinja incorrectly targets all forms
-
-## [2.3.0] - 2020-12-16
-
-### Added
-
-- Dashboard: Sorting of dashboard items by ordering number
-- Xtheme: add option to set a custom cell width in placeholders
-
-### Changed
-
-- Admin: set product default price value initial value to zero
-
-### Fixed
-
-- Admin: Fix multiple translations returned when using values_list on translated field
-- Front: Fix so mass and measurements unit is displayed in same unit as in the backend
-
-### Removed
-
-- Product variation management. [Use this instead](https://pypi.org/project/shuup-product-variations/).
-
-## [2.2.11] - 2020-12-08
-
-### Fixed
-
-- SimpleCMS: Show all CMS pages for authenticated users
-  when there is no group filter attached to the page
-
-## [2.2.10] - 2020-12-04
-
-### Fixed
-
-- GDPR: do not create consent for anonymous user in checkout
-
-
-## [2.2.9] - 2020-11-23
-
-### Changed
-
-- Core: Increase field lengths in *LogEntry models
-  - Add an index to the indentifier for faster querying.
-  - Use the same error prevention measures for message than is done for
-    identifier in _add_log_entry() for consistency.
-
-### Fixed
-
-- Core: Fix `ProtectedError` when deleting a `Manufacturer` which was still
-  connected to product(s).
-
-
-## [2.2.8] - 2020-11-23
-
-### Added
-
-- Add font size 16 to summernote text editor
-
-### Fixed
-
-- GDPR: make sure to return a blank list in the `get_active_consent_pages`
-  method when there is no page to consent
-
-
-## [2.2.7] - 2020-11-20
-
-### Fixed
-
-- Admin: do not add/remove shop staff member while saving a staff user
 
 
 ## [2.2.6] - 2020-11-17

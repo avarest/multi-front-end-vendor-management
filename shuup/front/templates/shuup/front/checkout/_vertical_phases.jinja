@@ -15,7 +15,7 @@
 {% endif %}
 
 {% block content %}
-    <div id="ajax_content" class="vertical-checkout-phase">
+    <div id="ajax_content">
         {% if view and view.phases %}
             <div class="panel-group"
                  id="accordion"
@@ -89,7 +89,7 @@
             }
         };
         $(function() {
-            $(".vertical-checkout-phase").find("form").on("submit", function(e) {
+            $("form").on("submit", function(e) {
                 if (window.currentPhase !== "confirm") {
                     e.preventDefault();
                     window.submitCheckoutPhaseForm($(this));
